@@ -16,9 +16,9 @@ function Form1({name,img,link}) {
         <form className='h-full flex flex-col justify-evenly items-center '>
         <div className='text-white font-poppins text-4xl tracking-widest p-4'>{name}</div> 
         {img}
-       
+        <Link to={link}> <input type="Submit" className='m-8 animate-bounce cursor-pointer font-poppins rounded-full px-5 py-1 bg-green-400 hover:from-green-500 hover:to-blue-600 '/></Link>
         </form>
-       <Link to={link}> <input type="Submit" className='mt-4 cursor-pointer font-poppins rounded-full px-5 py-1 bg-green-400 hover:from-green-500 hover:to-blue-600 '/></Link>
+      
        
       </div>
     </Tilt>
