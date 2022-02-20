@@ -1,8 +1,18 @@
 import React, { Component } from "react";
 // import SimpleStorageContract from "./contracts/SimpleStorage.json";
 import getWeb3 from "./getWeb3";
-
+import Form from "./components/Form/Form";
+import Register from "./components/Register/Register";
+import SignIn from "./components/SignIn/Signin";
+import SignUp from "./components/SignUp/SignUp";
+import HomePage from "./components/HomePage/HomePage";
+import ManReg from "./components/Form/ManReg";
+import SupReg from "./components/Form/SupReg";
+import MedReg from "./components/Form/Medicine";
+import Qr from "./components/QR/Qr"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import "./index.css"
 
 class App extends Component {
   state = { storageValue: 0, web3: null, accounts: null, contract: null };
@@ -53,9 +63,24 @@ class App extends Component {
     //   return <div>Loading Web3, accounts, and contract...</div>;
     // }
     return (
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
+      <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomePage/>} />
+      <Route path="SupReg" element={<SupReg/>}/> 
+      <Route path="/ManReg/MedReg" element={<MedReg/> }/>
+      <Route path="SignUp" element={<SignUp />} />
+      <Route path="ManReg" element={<ManReg />} />
+      <Route path="Register" element={<Register />} />
+      <Route path="SignIn" element={<SignIn/>} />
+      <Route path="Qr"    element={<Qr/>}/>
+      
+    </Routes>
+    
+
+   
+     
+      
+    </BrowserRouter>
     );
   }
 }
