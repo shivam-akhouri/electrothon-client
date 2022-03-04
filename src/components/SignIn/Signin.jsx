@@ -14,16 +14,17 @@ export default function SignIn() {
       <div className="container h-96 w-96 bg-white bg-opacity-10 rounded-3xl shadow-5xl relative z-2 border border-opacity-30 border-r-0 border-b-0 backdrop-filter backdrop-blur-sm">
         <form className='h-full flex flex-col justify-evenly items-center'>
           <div className='p-2 text-white font-poppins text-2xl tracking-widest'>Sign In</div>
-          <input className="p-2" type="text" placeholder='e-mail' className='input-text'/>
-          <input type="password" placeholder='password' className='input-text'/>
+          <input  type="text" placeholder='e-mail' className='input-text p-1'/>
+          <input type="password" placeholder='password' className='input-text p-1 mb-4'/>
          
 
           <Link to='/Register'><input type="Submit" className='animate-bounce cursor-pointer font-poppins rounded-full px-5 py-1 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80 '></input></Link>
+          <h1 className=" text-xl  text-white">Don't have an account?</h1>
+        {/*the button used for sign in/signup data*/}
+        <button className='m-2 animate-bounce cursor-pointer font-poppins rounded-full px-5 py-1 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80 ' ><Link to='/SignUp'>Sign Up</Link></button>
         </form>
 
-        <h1 className="p-4 text-3xl  text-white">Don't have an account</h1>
-        {/*the button used for sign in/signup data*/}
-        <button className='mt-4 animate-bounce cursor-pointer font-poppins rounded-full px-5 py-1 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80 ' ><Link to='/SignUp'>Sign Up</Link></button>
+       
       </div>
     </Tilt>
   </div>

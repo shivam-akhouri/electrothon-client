@@ -16,11 +16,12 @@ export default function Form({name,func,btnName,text,link}) {
          
 
           <input type="Submit" className='animate-bounce cursor-pointer font-poppins rounded-full px-5 py-1 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80 '/>
-        </form>
-
-        <h1 className="p-4 text-3xl  text-white">{text}</h1>
+          <h1 className="p-4 text-3xl  text-white">{text}</h1>
         {/*the button used for sign in/signup data*/}
         <button className='mt-4 animate-bounce cursor-pointer font-poppins rounded-full px-5 py-1 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80 ' onClick={func}>{btnName}</button>
+        </form>
+
+        
       </div>
     </Tilt>
   </div>
